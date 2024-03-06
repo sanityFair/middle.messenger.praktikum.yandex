@@ -1,0 +1,344 @@
+[
+    {
+        "id": 1,
+        "title": "my-chat",
+        "avatar": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+        "unread_count": 15,
+        "created_by": 12345,
+        "last_message": {
+            "user": {
+                "first_name": "Petya",
+                "second_name": "Pupkin",
+                "avatar": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+                "email": "my@email.com",
+                "login": "userLogin",
+                "phone": "8(911)-222-33-22"
+            },
+            "time": "14:22",
+            "content": "this is message content"
+        }
+    },
+    {
+        "id": 2,
+        "title": "Киноклуб",
+        "avatar": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+        "unread_count": 15,
+        "created_by": 12345,
+        "last_message": {
+            "user": {
+                "first_name": "Petya",
+                "second_name": "Pupkin",
+                "avatar": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+                "email": "my@email.com",
+                "login": "userLogin",
+                "phone": "8(911)-222-33-22"
+            },
+            "time": "Пт",
+            "content": "this is message content"
+        }
+    },
+    {
+        "id": 2,
+        "title": "Кодовое слово",
+        "avatar": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+        "unread_count": 15,
+        "created_by": 12345,
+        "last_message": {
+            "user": {
+                "first_name": "Petya",
+                "second_name": "Pupkin",
+                "avatar": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+                "email": "my@email.com",
+                "login": "userLogin",
+                "phone": "8(911)-222-33-22"
+            },
+            "time": "1 Мая 2020",
+            "content": "this is message content"
+        }
+    },
+    {
+        "id": 1,
+        "title": "my-chat",
+        "avatar": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+        "unread_count": 15,
+        "created_by": 12345,
+        "last_message": {
+            "user": {
+                "first_name": "Petya",
+                "second_name": "Pupkin",
+                "avatar": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+                "email": "my@email.com",
+                "login": "userLogin",
+                "phone": "8(911)-222-33-22"
+            },
+            "time": "14:22",
+            "content": "this is message content"
+        }
+    },
+    {
+        "id": 2,
+        "title": "Киноклуб",
+        "avatar": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+        "unread_count": 15,
+        "created_by": 12345,
+        "last_message": {
+            "user": {
+                "first_name": "Petya",
+                "second_name": "Pupkin",
+                "avatar": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+                "email": "my@email.com",
+                "login": "userLogin",
+                "phone": "8(911)-222-33-22"
+            },
+            "time": "Пт",
+            "content": "this is message content"
+        }
+    },
+    {
+        "id": 2,
+        "title": "Кодовое слово",
+        "avatar": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+        "unread_count": 15,
+        "created_by": 12345,
+        "last_message": {
+            "user": {
+                "first_name": "Petya",
+                "second_name": "Pupkin",
+                "avatar": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+                "email": "my@email.com",
+                "login": "userLogin",
+                "phone": "8(911)-222-33-22"
+            },
+            "time": "1 Мая 2020",
+            "content": "this is message content"
+        }
+    },
+    {
+        "id": 1,
+        "title": "my-chat",
+        "avatar": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+        "unread_count": 15,
+        "created_by": 12345,
+        "last_message": {
+            "user": {
+                "first_name": "Petya",
+                "second_name": "Pupkin",
+                "avatar": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+                "email": "my@email.com",
+                "login": "userLogin",
+                "phone": "8(911)-222-33-22"
+            },
+            "time": "14:22",
+            "content": "this is message content"
+        }
+    },
+    {
+        "id": 2,
+        "title": "Киноклуб",
+        "avatar": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+        "unread_count": 15,
+        "created_by": 12345,
+        "last_message": {
+            "user": {
+                "first_name": "Petya",
+                "second_name": "Pupkin",
+                "avatar": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+                "email": "my@email.com",
+                "login": "userLogin",
+                "phone": "8(911)-222-33-22"
+            },
+            "time": "Пт",
+            "content": "this is message content"
+        }
+    },
+    {
+        "id": 2,
+        "title": "Кодовое слово",
+        "avatar": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+        "unread_count": 15,
+        "created_by": 12345,
+        "last_message": {
+            "user": {
+                "first_name": "Petya",
+                "second_name": "Pupkin",
+                "avatar": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+                "email": "my@email.com",
+                "login": "userLogin",
+                "phone": "8(911)-222-33-22"
+            },
+            "time": "1 Мая 2020",
+            "content": "this is message content"
+        }
+    },
+    {
+        "id": 1,
+        "title": "my-chat",
+        "avatar": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+        "unread_count": 15,
+        "created_by": 12345,
+        "last_message": {
+            "user": {
+                "first_name": "Petya",
+                "second_name": "Pupkin",
+                "avatar": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+                "email": "my@email.com",
+                "login": "userLogin",
+                "phone": "8(911)-222-33-22"
+            },
+            "time": "14:22",
+            "content": "this is message content"
+        }
+    },
+    {
+        "id": 2,
+        "title": "Киноклуб",
+        "avatar": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+        "unread_count": 15,
+        "created_by": 12345,
+        "last_message": {
+            "user": {
+                "first_name": "Petya",
+                "second_name": "Pupkin",
+                "avatar": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+                "email": "my@email.com",
+                "login": "userLogin",
+                "phone": "8(911)-222-33-22"
+            },
+            "time": "Пт",
+            "content": "this is message content"
+        }
+    },
+    {
+        "id": 2,
+        "title": "Кодовое слово",
+        "avatar": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+        "unread_count": 15,
+        "created_by": 12345,
+        "last_message": {
+            "user": {
+                "first_name": "Petya",
+                "second_name": "Pupkin",
+                "avatar": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+                "email": "my@email.com",
+                "login": "userLogin",
+                "phone": "8(911)-222-33-22"
+            },
+            "time": "1 Мая 2020",
+            "content": "this is message content"
+        }
+    },
+    {
+        "id": 1,
+        "title": "my-chat",
+        "avatar": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+        "unread_count": 15,
+        "created_by": 12345,
+        "last_message": {
+            "user": {
+                "first_name": "Petya",
+                "second_name": "Pupkin",
+                "avatar": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+                "email": "my@email.com",
+                "login": "userLogin",
+                "phone": "8(911)-222-33-22"
+            },
+            "time": "14:22",
+            "content": "this is message content"
+        }
+    },
+    {
+        "id": 2,
+        "title": "Киноклуб",
+        "avatar": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+        "unread_count": 15,
+        "created_by": 12345,
+        "last_message": {
+            "user": {
+                "first_name": "Petya",
+                "second_name": "Pupkin",
+                "avatar": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+                "email": "my@email.com",
+                "login": "userLogin",
+                "phone": "8(911)-222-33-22"
+            },
+            "time": "Пт",
+            "content": "this is message content"
+        }
+    },
+    {
+        "id": 2,
+        "title": "Кодовое слово",
+        "avatar": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+        "unread_count": 15,
+        "created_by": 12345,
+        "last_message": {
+            "user": {
+                "first_name": "Petya",
+                "second_name": "Pupkin",
+                "avatar": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+                "email": "my@email.com",
+                "login": "userLogin",
+                "phone": "8(911)-222-33-22"
+            },
+            "time": "1 Мая 2020",
+            "content": "this is message content"
+        }
+    },
+    {
+        "id": 1,
+        "title": "my-chat",
+        "avatar": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+        "unread_count": 15,
+        "created_by": 12345,
+        "last_message": {
+            "user": {
+                "first_name": "Petya",
+                "second_name": "Pupkin",
+                "avatar": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+                "email": "my@email.com",
+                "login": "userLogin",
+                "phone": "8(911)-222-33-22"
+            },
+            "time": "14:22",
+            "content": "this is message content"
+        }
+    },
+    {
+        "id": 2,
+        "title": "Киноклуб",
+        "avatar": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+        "unread_count": 15,
+        "created_by": 12345,
+        "last_message": {
+            "user": {
+                "first_name": "Petya",
+                "second_name": "Pupkin",
+                "avatar": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+                "email": "my@email.com",
+                "login": "userLogin",
+                "phone": "8(911)-222-33-22"
+            },
+            "time": "Пт",
+            "content": "this is message content"
+        }
+    },
+    {
+        "id": 2,
+        "title": "Кодовое слово",
+        "avatar": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+        "unread_count": 15,
+        "created_by": 12345,
+        "last_message": {
+            "user": {
+                "first_name": "Petya",
+                "second_name": "Pupkin",
+                "avatar": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+                "email": "my@email.com",
+                "login": "userLogin",
+                "phone": "8(911)-222-33-22"
+            },
+            "time": "1 Мая 2020",
+            "content": "this is message content"
+        }
+    }
+]

@@ -1,0 +1,6 @@
+.icon-view {
+    width: 47px;
+    height: 47px;
+    background: var(--background-secondary-light);
+    border-radius: var(--border-radius-circle);
+}

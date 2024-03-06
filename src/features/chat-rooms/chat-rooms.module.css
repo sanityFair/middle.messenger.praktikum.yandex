@@ -1,0 +1,35 @@
+@import '@/features/index.css';
+
+.chat-rooms {
+    width: var(--aside-width);
+    background-color: var(--background-default);
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--background-secondary-light);
+    height: 100%;
+    padding: var(--gap-l) var(--gap-xs) 0;
+}
+
+.nav {
+    display: flex;
+    row-gap: var(--gap-l);
+    flex-direction: column;
+    margin-bottom: var(--gap-l);
+}
+
+.chat-wrapper {
+    overflow-y: auto;
+    
+    &>:first-child {
+        border-top: 1px solid var(--background-secondary-light);
+        border-bottom: 1px solid var(--background-secondary-light);
+    }
+
+    &>div:not(:first-child) {
+        border-bottom: 1px solid var(--background-secondary-light);
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }  
+}

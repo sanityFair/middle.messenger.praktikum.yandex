@@ -1,0 +1,44 @@
+.button {
+    display: inline-block;
+    color: var(--color-white);
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: none;
+    height: 40px;
+    user-select: none;
+    background-color: var(--brand-primary);
+    transition: all .2s linear;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 13px;
+    text-align: center;
+    border-radius: var(--border-radius-m);
+    min-width: 100px;
+    padding: var(--gap-s) var(--gap-m);
+
+    &:active,
+    :hover {
+        opacity: .8;
+    }
+
+    :focus+&,
+    &:focus {
+        outline: 0;
+    }
+}
+
+.link {
+    display: inline-block;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 11px;
+    color: #3369F3;
+    height: 40px;
+    padding: var(--gap-s) var(--gap-m);
+    text-align: center;
+}

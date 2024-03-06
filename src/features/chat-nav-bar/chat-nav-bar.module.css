@@ -1,0 +1,30 @@
+.chat-nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    border-bottom: 1px solid var(--background-secondary-light);
+    padding-bottom: var(--gap-xs);
+    margin-bottom: var(--gap-m);
+
+    & > div {
+        display: inline-flex;
+        align-items: center;
+        column-gap: var(--gap-s);
+
+        & p {
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 13px;
+            color: var(--text-primary);
+        }
+    }
+
+    & .more {
+        background-color: transparent;
+        padding: var(--gap-2xs);
+    }
+}
+

@@ -1,0 +1,11 @@
+<div class={{styles.chat-rooms}}>
+    <div class={{styles.nav}}>
+        {{> ProfileLink }}
+        {{> Search }}
+    </div>
+    <div class={{styles.chat-wrapper}}>
+        {{#each chats}}
+            {{> ChatInfo styles=@root.styles unread_count=unread_count avatar=avatar title=title content=last_message.content time=last_message.time }}
+        {{/each}}
+    </div>
+</div>

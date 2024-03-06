@@ -1,0 +1,50 @@
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: 340px;
+    height: 460px;
+    background: var(--color-white);
+    box-shadow: var(--shadow);
+    border-radius: 12px;
+    padding: var(--gap-l);
+}
+
+.title {
+    margin-top: var(--gap-xl);
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: var(--text-primary);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin-top: var(--gap-xl);
+
+    &>fieldset {
+        margin-top: var(--gap-xl);
+    }
+}
+
+.row {
+    margin-top: var(--gap-xl);
+    display: grid;
+    row-gap: var(--gap-m);
+    margin-bottom: var(--gap-xl);
+}
+
+.spacer {
+    height: 100px;
+}
+
