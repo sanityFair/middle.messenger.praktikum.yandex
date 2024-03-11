@@ -1,0 +1,60 @@
+.personal-information {
+    display: grid;
+    row-gap: var(--gap-m);
+    width: 510px;
+
+    & :nth-child(6) {
+        border-bottom: none;
+    }
+}
+.personal-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: var(--gap-s);
+    border-bottom: 1px solid var(--background-secondary-light);
+}
+
+.personal-action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: var(--gap-s);
+    transition: all 0.2s linear;
+
+    &:not(:last-child) {
+        color: var(--brand-primary);
+        border-bottom: 1px solid var(--background-secondary-light);
+    }
+
+    &:last-child {
+        color: var(--brand-secondary);
+    }
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+    }
+}
+
+.personal-spacer {
+    height: var(--gap-xl);
+}
+
+.name {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 13px;
+    color: var(--text-primary);
+}
+
+.value {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 13px;
+    color: var(--text-secondary);
+}

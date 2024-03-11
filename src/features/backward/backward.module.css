@@ -1,0 +1,27 @@
+.backward {
+    position: absolute;
+    width: 64px;
+    background-color: var(--background-secondary-light);
+    border-right: 1px solid #EAEAEA;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.backward-wrapper-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: var(--border-radius-pill);
+    background-color: var(--brand-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s linear;
+    z-index: 12;
+
+    &:hover {
+        cursor: pointer;
+        opacity: .8;
+    }
+}

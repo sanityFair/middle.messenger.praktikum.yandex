@@ -1,0 +1,22 @@
+.profile-page {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 64px 1fr;
+
+    & .profile-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+
+        &>div:first-child {
+            margin-bottom: calc(3 * var(--gap-l));
+        }
+    }
+}

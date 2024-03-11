@@ -1,0 +1,33 @@
+@import '@/shared/variables/index.css';
+
+.error {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    & h2 {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 40px;
+        text-align: center;
+        color: var(--text-primary);
+        margin-bottom: var(--gap-s);
+    }
+
+    & p {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 20px;
+        text-align: center;
+        color: var(--text-primary);
+        margin-bottom: var(--gap-xl);
+    }
+}

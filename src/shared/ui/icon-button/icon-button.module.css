@@ -1,0 +1,24 @@
+.icon-button {
+    display: inline-flex;
+    color: var(--color-white);
+    cursor: pointer;
+    border: none;
+    width: 28px;
+    height: 28px;
+    user-select: none;
+    background-color: var(--brand-primary);
+    transition: all 0.2s linear;
+    border-radius: var(--border-radius-pill);
+    align-items: center;
+    justify-content: center;
+
+    &:active,
+    :hover {
+        opacity: 0.8;
+    }
+
+    :focus + &,
+    &:focus {
+        outline: 0;
+    }
+}

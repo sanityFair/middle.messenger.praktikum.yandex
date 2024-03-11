@@ -1,0 +1,11 @@
+:root {
+    --border-radius-xs: 2px;
+    --border-radius-s: 4px;
+    --border-radius-m: 8px;
+    --border-radius-l: 12px;
+    --border-radius-xl: 16px;
+    --border-radius-xxl: 20px;
+    --border-radius-3xl: 24px;
+    --border-radius-circle: 50%;
+    --border-radius-pill: 99px;
+}

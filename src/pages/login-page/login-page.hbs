@@ -1,0 +1,14 @@
+<div class={{styles.container}}>
+    <div class={{styles.card}}>
+        <h3 class={{styles.title}}>Вход</h3>
+        <form class={{styles.form}}>
+            {{> Input type="text" name="login" label="Логин" placeholder="Логин" required="true" }}
+            {{> Input type="password" name="password" label="Пароль" placeholder="Пароль" required="true" }}
+            <div class={{styles.spacer}}></div>
+        <div class="{{styles.row}}">
+            {{> Button title="Авторизоваться" button=true page="chats"}}
+            {{> Button title="Нет аккаунта?" link=true page="signIn"}}
+        </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+@import './colors.css';
+@import './gap.css';
+@import './shadow.css';
+@import './border-radius.css';
+
+:root {
+    --aside-width:360px;
+}

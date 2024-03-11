@@ -1,0 +1,10 @@
+@import './search/search.module.css';
+@import './profile-link/profile-link.module.css';
+@import './chat-info/chat-info.module.css';
+@import './chat-rooms/chat-rooms.module.css';
+@import './chat-workspace/chat-workspace.module.css';
+@import './profile-avatar/profile-avatar.module.css';
+@import './personal-information/personal-information.module.css';
+@import './backward/backward.module.css';
+@import './chat-action-bar/chat-action-bar.module.css';
+@import './chat-nav-bar/chat-nav-bar.module.css';

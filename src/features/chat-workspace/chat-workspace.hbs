@@ -1,0 +1,11 @@
+{{#if chatSelected}}
+    <div class={{styles.chat-selected}}>
+        {{> ChatNavBar }}
+        <div>messages</div>
+        {{> ChatActionBar }}
+    </div>
+{{else}}
+    <div class={{styles.chat-not-selected}}>
+        <p>Выберите чат чтобы отправить сообщение</p>
+    </div>
+{{/if}}
