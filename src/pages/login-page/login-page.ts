@@ -25,7 +25,7 @@ export class LoginPage extends Block<LoginProps> {
                 const isError = hasErrorForm(this.children);
                 const forms = document.forms[0];
 
-                const { login, password } = forms.signUp;
+                const { login, password } = forms;
 
                 if (!isError && login.value && password.value) {
                     console.log({
@@ -43,7 +43,7 @@ export class LoginPage extends Block<LoginProps> {
             <div class={{styles.container}}>
                 <div class={{styles.card}}>
                     <h3 class={{styles.title}}>Вход</h3>
-                    <form class={{styles.form}} name="signUp" >
+                    <form class={{styles.form}} name="sign-up" >
                         {{{ Input type="text" inputName="login" id="login" ref="login" childInputRef="login" label="Логин" placeholder="Логин" required="true" }}}
                         {{{ Input type="password" id="password" inputName="password" ref="password" childInputRef="password" label="Пароль" placeholder="Пароль" required="true" }}}
                         <div class={{styles.spacer}}></div>

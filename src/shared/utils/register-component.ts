@@ -24,7 +24,7 @@ export const registerComponent = <Props extends Record<string, unknown>>(
 
             (Object.keys(hash) as typeof hash).forEach((key: keyof Props) => {
                 if (this[key] && typeof this[key] === 'string') {
-                    hash[key] = hash[key].replace(new RegExp(`{{${key}}}`, 'i'), this[key]);
+                    hash[key] = hash[key].replace(new RegExp(`{{` + key.toString() + `}}`, 'i'), this[key]);
                 }
             });
 
