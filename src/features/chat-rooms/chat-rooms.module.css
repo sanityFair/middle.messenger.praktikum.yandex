@@ -1,4 +1,4 @@
-@import '@/features/index.css';
+@import url('@/features/index.css');
 
 .chat-rooms {
     width: var(--aside-width);

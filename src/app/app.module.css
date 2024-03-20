@@ -1,6 +1,7 @@
-@import '@/shared/ui/index.css';
-@import '@/pages/index.css';
-@import '@/features/index.css';
+@import url('@/shared/ui/index.css');
+@import url('@/pages/index.css');
+@import url('@/features/index.css');
+@import url('@/shared/variables/index.css');
 
 * {
     margin: 0;

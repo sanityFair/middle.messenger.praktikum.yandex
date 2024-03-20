@@ -1,1 +1,1 @@
-export { default as IconView } from './icon-view.hbs?raw';
+export { IconView } from './icon-view';

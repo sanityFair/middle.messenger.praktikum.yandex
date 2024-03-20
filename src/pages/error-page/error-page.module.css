@@ -1,4 +1,4 @@
-@import '@/shared/variables/index.css';
+@import url('@/shared/variables/index.css');
 
 .error {
     position: absolute;
@@ -10,7 +10,7 @@
     flex-direction: column;
 
     & h2 {
-        font-family: 'Inter';
+        font-family: Inter, sans-serif;
         font-style: normal;
         font-weight: 500;
         font-size: 40px;
@@ -21,7 +21,7 @@
     }
 
     & p {
-        font-family: 'Inter';
+        font-family: Inter, sans-serif;
         font-style: normal;
         font-weight: 500;
         font-size: 20px;
