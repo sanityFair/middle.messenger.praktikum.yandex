@@ -1,36 +1,37 @@
 .profile-avatar {
     text-align: center;
-
-    & p {
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 16px;
-        margin-top: var(--gap-m);
-    }
-}
-.profile-avatar input[type='file'] {
-    display: none;
-}
-.profile-figure {
-    position: relative;
-    width: 130px;
-    height: 130px;
-}
-.profile-avatar {
     cursor: pointer;
     width: 130px;
     height: 130px;
     box-sizing: border-box;
     border-radius: var(--border-radius-pill);
     transition: all ease-in-out 0.3s;
+    
+    & p {
+        font-family: Inter, sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 16px;
+        margin-top: var(--gap-m);
+    }
+
+    & input[type='file'] {
+        display: none;
+    }
+}
+
+
+.profile-figure {
+    position: relative;
+    width: 130px;
+    height: 130px;
 }
 
 .profile-figcaption {
     cursor: pointer;
     position: absolute;
-    top: 0px;
+    top: 0;
     width: inherit;
     height: inherit;
     border-radius: 100%;
@@ -38,6 +39,7 @@
     background-color: transparent;
     transition: all ease-in-out 0.3s;
 }
+
 .profile-figcaption:hover {
     opacity: 1;
     background-color: var(--bg-blur);
@@ -45,7 +47,7 @@
     &::before {
         content: 'Поменять аватар';
         color: var(--color-white);
-        font-family: 'Inter';
+        font-family: Inter, sans-serif;
         font-size: 13px;
         line-height: 14px;
         height: 100%;

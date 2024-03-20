@@ -1,11 +1,12 @@
-@import '@/shared/variables/index.css';
+@import url('@/shared/variables/index.css');
 
 :root {
     --border-bottom: 1px solid var(--brand-primary);
+    --error-border-bottom: 1px solid var(--brand-secondary);
     --hr-display: block;
-    --bg-input:transparent;
-    --border-radius-input:0;
-    --padding-input:var(--gap-s) 0 var(--gap-xs);
+    --bg-input: transparent;
+    --border-radius-input: 0;
+    --padding-input: var(--gap-s) 0 var(--gap-xs);
 }
 
 .field {
@@ -29,10 +30,11 @@
         outline: none;
         cursor: text;
 
-        &::-webkit-input-placeholder {
+        &::placeholder {
             transition: color 300ms ease;
         }
-        &:not(:focus)::-webkit-input-placeholder {
+      
+        &:not(:focus)::placeholder{
             color: transparent;
         }
     }
@@ -56,32 +58,42 @@
         visibility: hidden;
         z-index: 10;
     }
-    input:focus ~ hr {
-        transform: scaleX(1);
-        visibility: visible;
-    }
 
     label {
         display: var(--hr-display);
         position: absolute;
         top: var(--gap-m);
         left: 0;
-        font-size: 120%;
         color: var(--text-secondary);
         transform-origin: 0 -150%;
         transition:
             transform,
             top 300ms ease;
         pointer-events: none;
-        font-family: 'Inter';
+        font-family: Inter, sans-serif;
         font-style: normal;
         font-weight: 500;
         font-size: 13px;
         line-height: 13px;
     }
+
     input:focus ~ label,
     input:valid ~ label {
         top: var(--gap-xs);
         transform: scale(0.6);
     }
+
+    &:has(.error) input {
+        border-bottom: var(--error-border-bottom);
+    }
+}
+
+.error {
+    margin-top: var(--gap-xs);
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 13px;
+    color: var(--brand-secondary);
 }

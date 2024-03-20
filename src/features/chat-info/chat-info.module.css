@@ -20,7 +20,7 @@
 }
 
 .name {
-    font-family: 'Inter';
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 13px;
@@ -30,7 +30,7 @@
 }
 
 .time {
-    font-family: 'Inter';
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 9px;
@@ -44,7 +44,7 @@
     grid-area: last-message;
     text-overflow: ellipsis;
     overflow: hidden;
-    font-family: 'Inter';
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-size: 12px;
     line-height: 15px;

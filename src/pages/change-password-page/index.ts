@@ -1,1 +1,1 @@
-export { default as ChangePasswordPage } from './change-password-page.hbs?raw';
+export { ChangePasswordPage } from './change-password-page';

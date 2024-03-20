@@ -1,1 +1,1 @@
-export { default as PersonalInformation } from './personal-information.hbs?raw';
+export { PersonalInformation } from './personal-information';

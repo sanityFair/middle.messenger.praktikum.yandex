@@ -1,5 +1,5 @@
-@import './button/button.module.css';
-@import './input/input.module.css';
-@import './badge/badge.module.css';
-@import './icon-view/icon-view.module.css';
-@import './icon-button/icon-button.module.css';
+@import url('./button/button.module.css');
+@import url('./input/input.module.css');
+@import url('./badge/badge.module.css');
+@import url('./icon-view/icon-view.module.css');
+@import url('./icon-button/icon-button.module.css');
