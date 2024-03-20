@@ -1,1 +1,1 @@
-export { default as ChatActionBar } from './chat-action-bar.hbs?raw';
+export { ChatActionBar } from './chat-action-bar';

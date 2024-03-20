@@ -1,5 +1,4 @@
 .profile-page {
-    display: flex;
     flex-direction: row;
     align-items: center;
     position: absolute;
@@ -15,7 +14,7 @@
         width: 100%;
         position: absolute;
 
-        &>div:first-child {
+        & > div:first-child {
             margin-bottom: calc(3 * var(--gap-l));
         }
     }

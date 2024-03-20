@@ -1,8 +1,8 @@
-@import './error-page/error-page.module.css';
-@import './not-found-page/not-found-page.module.css';
-@import './login-page/login-page.module.css';
-@import './sign-in-page/sign-in-page.module.css';
-@import './chat-page/chat-page.module.css';
-@import './profile-page/profile-page.module.css';
-@import './change-password-page/change-password-page.module.css';
-@import './change-profile-page/change-profile-page.module.css';
+@import url('./error-page/error-page.module.css');
+@import url('./not-found-page/not-found-page.module.css');
+@import url('./login-page/login-page.module.css');
+@import url('./sign-in-page/sign-in-page.module.css');
+@import url('./chat-page/chat-page.module.css');
+@import url('./profile-page/profile-page.module.css');
+@import url('./change-password-page/change-password-page.module.css');
+@import url('./change-profile-page/change-profile-page.module.css');

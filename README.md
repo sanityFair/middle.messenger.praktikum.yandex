@@ -1,13 +1,12 @@
 ## Описание
 
-Курс профессиональной программы обучения мидл фронтенд-разработчика. 
-
+Курс профессиональной программы обучения мидл фронтенд-разработчика.
 
 ## Установка и запуск
 
-- `npm install` — установка зависимостей
-- `npm run build ` — сборка проекта
-- `npm run start` — запуск локальной версии на http://localhost:3000/
+-   `npm install` — установка зависимостей
+-   `npm run build ` — сборка проекта
+-   `npm run start` — запуск локальной версии на http://localhost:3000/
 
 ## Проект в интернете
 
@@ -16,19 +15,18 @@
 
 ## Макеты
 
-Прототип в [Figma](https://www.figma.com/file/IwpjO4IdUYca2gTCO89hQ0/Chat_external_link-(Copy)?type=design&node-id=1-600&mode=design&t=ZrhM6YX70Q5OFtkP-0)
+Прототип в [Figma](<https://www.figma.com/file/IwpjO4IdUYca2gTCO89hQ0/Chat_external_link-(Copy)?type=design&node-id=1-600&mode=design&t=ZrhM6YX70Q5OFtkP-0>)
 
-## Ссылки на все свёрстанные страницы 
+## Ссылки на все свёрстанные страницы
 
-- [Авторизация](https://www.figma.com/file/IwpjO4IdUYca2gTCO89hQ0/Chat_external_link-(Copy)?type=design&node-id=1-600&mode=design&t=jIZTNmlfPOy8NyJj-4)
-- [Регистрация](https://www.figma.com/file/IwpjO4IdUYca2gTCO89hQ0/Chat_external_link-(Copy)?type=design&node-id=1-658&mode=design&t=jIZTNmlfPOy8NyJj-4)
-- [Чаты](https://www.figma.com/file/IwpjO4IdUYca2gTCO89hQ0/Chat_external_link-(Copy)?type=design&node-id=1-2&mode=design&t=jIZTNmlfPOy8NyJj-4)
-- [Профиль](https://www.figma.com/file/IwpjO4IdUYca2gTCO89hQ0/Chat_external_link-(Copy)?type=design&node-id=1-498&mode=design&t=jIZTNmlfPOy8NyJj-4)
-- [Смена пароля](https://www.figma.com/file/IwpjO4IdUYca2gTCO89hQ0/Chat_external_link-(Copy)?type=design&node-id=12-35&mode=design&t=jIZTNmlfPOy8NyJj-4)
-- [Смена персональных данных](https://www.figma.com/file/IwpjO4IdUYca2gTCO89hQ0/Chat_external_link-(Copy)?type=design&node-id=1-515&mode=design&t=jIZTNmlfPOy8NyJj-4)
-- [500](https://www.figma.com/file/IwpjO4IdUYca2gTCO89hQ0/Chat_external_link-(Copy)?type=design&node-id=1-616&mode=design&t=jIZTNmlfPOy8NyJj-4)
-- [400](https://www.figma.com/file/IwpjO4IdUYca2gTCO89hQ0/Chat_external_link-(Copy)?type=design&node-id=1-612&mode=design&t=jIZTNmlfPOy8NyJj-4)
-
+-   [Авторизация](<https://www.figma.com/file/IwpjO4IdUYca2gTCO89hQ0/Chat_external_link-(Copy)?type=design&node-id=1-600&mode=design&t=jIZTNmlfPOy8NyJj-4>)
+-   [Регистрация](<https://www.figma.com/file/IwpjO4IdUYca2gTCO89hQ0/Chat_external_link-(Copy)?type=design&node-id=1-658&mode=design&t=jIZTNmlfPOy8NyJj-4>)
+-   [Чаты](<https://www.figma.com/file/IwpjO4IdUYca2gTCO89hQ0/Chat_external_link-(Copy)?type=design&node-id=1-2&mode=design&t=jIZTNmlfPOy8NyJj-4>)
+-   [Профиль](<https://www.figma.com/file/IwpjO4IdUYca2gTCO89hQ0/Chat_external_link-(Copy)?type=design&node-id=1-498&mode=design&t=jIZTNmlfPOy8NyJj-4>)
+-   [Смена пароля](<https://www.figma.com/file/IwpjO4IdUYca2gTCO89hQ0/Chat_external_link-(Copy)?type=design&node-id=12-35&mode=design&t=jIZTNmlfPOy8NyJj-4>)
+-   [Смена персональных данных](<https://www.figma.com/file/IwpjO4IdUYca2gTCO89hQ0/Chat_external_link-(Copy)?type=design&node-id=1-515&mode=design&t=jIZTNmlfPOy8NyJj-4>)
+-   [500](<https://www.figma.com/file/IwpjO4IdUYca2gTCO89hQ0/Chat_external_link-(Copy)?type=design&node-id=1-616&mode=design&t=jIZTNmlfPOy8NyJj-4>)
+-   [400](<https://www.figma.com/file/IwpjO4IdUYca2gTCO89hQ0/Chat_external_link-(Copy)?type=design&node-id=1-612&mode=design&t=jIZTNmlfPOy8NyJj-4>)
 
 ## Описание работы
 

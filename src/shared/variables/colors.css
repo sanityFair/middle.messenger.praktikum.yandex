@@ -1,11 +1,11 @@
 :root {
-    --brand-primary: #3369F3;
-    --brand-secondary: #FF0000;
-    --text-secondary: #999999;
-    --interactive-active: #E4EDFD;
-    --background-secondary-light: #EFEFEF;
-    --background-default: #FBFBFB;
-    --color-white:#fff;
-    --text-primary:#1E1E1E;
-    --bg-blur:rgba(0, 0, 0, 0.5);
+    --brand-primary: #3369f3;
+    --brand-secondary: #f00000;
+    --text-secondary: #999;
+    --interactive-active: #e4edfd;
+    --background-secondary-light: #efefef;
+    --background-default: #fbfbfb;
+    --color-white: #fff;
+    --text-primary: #1e1e1e;
+    --bg-blur: rgb(0 0 0 / 50%);
 }

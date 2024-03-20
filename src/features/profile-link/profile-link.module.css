@@ -3,7 +3,7 @@
     justify-content: flex-end;
     column-gap: var(--gap-2xs);
     color: var(--text-secondary);
-    font-family: 'Inter';
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-size: 12px;
     line-height: 12px;

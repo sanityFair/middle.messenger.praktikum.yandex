@@ -17,5 +17,5 @@ export const icons = {
     StatusRead,
     ThreeDots,
     ProfileAvatar,
-    ArrowForward
+    ArrowForward,
 };
