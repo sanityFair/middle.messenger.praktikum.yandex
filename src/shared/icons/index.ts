@@ -9,13 +9,13 @@ import ProfileAvatar from './avatar.svg';
 import ArrowForward from './arrow-forward.svg';
 
 export const icons = {
-    Arrow,
-    ArrowBack,
-    PaperClip,
-    ProfileArrow,
-    Search,
-    StatusRead,
-    ThreeDots,
-    ProfileAvatar,
-    ArrowForward
+  Arrow,
+  ArrowBack,
+  PaperClip,
+  ProfileArrow,
+  Search,
+  StatusRead,
+  ThreeDots,
+  ProfileAvatar,
+  ArrowForward,
 };

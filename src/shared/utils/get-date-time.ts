@@ -1,11 +1,8 @@
-export const getDateTime = (
-    time: string,
-    options?: Intl.DateTimeFormatOptions,
-): string => {
-    if (!time) return '–';
+export const getDateTime = (time: string, options?: Intl.DateTimeFormatOptions): string => {
+  if (!time) return '–';
 
-    const date = new Date(time);
-    const formatDate = Intl.DateTimeFormat('ru-RU', options).format(date);
+  const date = new Date(time);
+  const formatDate = Intl.DateTimeFormat('ru-RU', options).format(date);
 
-    return formatDate;
+  return formatDate;
 };

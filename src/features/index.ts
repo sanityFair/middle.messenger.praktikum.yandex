@@ -6,5 +6,6 @@ export * from './chat-workspace';
 export * from './profile-avatar';
 export * from './personal-information';
 export * from './backward';
-export * from './chat-action-bar'
+export * from './chat-action-bar';
 export * from './chat-nav-bar';
+export * from './message';

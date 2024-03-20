@@ -1,48 +1,43 @@
-import Handlebars from 'handlebars';
-import * as Components from '@/shared/ui';
-import * as Pages from '@/pages';
-import * as Features from '@/features';
-import { renderTemplate } from '@/shared/utils';
-import { icons } from '@/shared/icons';
+import * as components from '@/shared/ui';
+import * as features from '@/features';
+import { BlockConstructable, registerComponent } from '@/shared/utils';
 
-import styles from './app.module.css';
-import { chatsMock } from '@/shared/mocks';
+import './app.module.css';
+
+import { renderDOM } from '@/shared/utils/render-dom';
+import {
+    ChatPage,
+    LoginPage,
+    SignInPage,
+    ChangePasswordPage,
+    ChangeProfilePage,
+    ErrorPage,
+    NotFoundPage,
+    ProfilePage,
+} from '@/pages';
+
+Object.values({ ...components, ...features }).forEach((component) =>
+    registerComponent(component as BlockConstructable<Record<string, unknown>>),
+);
 
 const pages = {
-    login: [Pages.LoginPage],
-    signIn: [Pages.SignInPage],
-    error: [Pages.ErrorPage],
-    notFound: [Pages.NotFoundPage],
-    chats: [Pages.ChatPage],
-    profile: [Pages.ProfilePage],
-    сhangePasswordPage: [Pages.ChangePasswordPage],
-    сhangeProfilePage: [Pages.ChangeProfilePage],
+    login: [new LoginPage()],
+    signIn: [new SignInPage()],
+    error: [new ErrorPage()],
+    notFound: [new NotFoundPage()],
+    chats: [new ChatPage()],
+    profile: [new ProfilePage()],
+    сhangePasswordPage: [new ChangePasswordPage()],
+    сhangeProfilePage: [new ChangeProfilePage()],
 };
-
-Object.entries({ ...Components, ...Features }).forEach(([name, component]) => {
-    Handlebars.registerPartial(name, component);
-});
-
-document.addEventListener('DOMContentLoaded', () => navigate('login'));
 
 const navigate = (page: keyof typeof pages) => {
     const [source] = pages[page];
 
-    renderTemplate<{
-        icons: typeof icons;
-        chats?: typeof chatsMock;
-        styles?: typeof styles;
-    }>({
-        template: source,
-        styles,
-        context: {
-            icons,
-            chats: chatsMock,
-            styles,
-        },
-        containerId: '#app',
-    });
+    renderDOM(source);
 };
+
+document.addEventListener('DOMContentLoaded', () => navigate('login'));
 
 document.addEventListener('click', (e) => {
     const page = (e.target as HTMLElement)?.getAttribute('page') as keyof typeof pages;

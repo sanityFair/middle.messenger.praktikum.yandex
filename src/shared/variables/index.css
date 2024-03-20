@@ -1,7 +1,7 @@
-@import './colors.css';
-@import './gap.css';
-@import './shadow.css';
-@import './border-radius.css';
+@import url('./colors.css');
+@import url('./gap.css');
+@import url('./shadow.css');
+@import url('./border-radius.css');
 
 :root {
     --aside-width:360px;

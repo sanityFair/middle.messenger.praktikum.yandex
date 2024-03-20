@@ -1,1 +1,1 @@
-export { default as ChatNavBar } from './chat-nav-bar.hbs?raw';
+export { ChatNavBar } from './chat-nav-bar';
