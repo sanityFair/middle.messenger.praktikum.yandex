@@ -9,7 +9,7 @@
 
 .card {
     width: 340px;
-    height: 460px;
+    height: max-content;
     background: var(--color-white);
     box-shadow: var(--shadow);
     border-radius: 12px;
@@ -18,7 +18,7 @@
 
 .title {
     margin-top: var(--gap-xl);
-    font-family: 'Inter';
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -32,7 +32,7 @@
     flex-direction: column;
     margin-top: var(--gap-xl);
 
-    &>fieldset {
+    & > fieldset {
         margin-top: var(--gap-xl);
     }
 }
@@ -47,4 +47,3 @@
 .spacer {
     height: 100px;
 }
-

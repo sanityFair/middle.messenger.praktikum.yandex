@@ -1,4 +1,4 @@
-@import '@/features/index.css';
+@import url('@/features/index.css');
 
 .chat-rooms {
     width: var(--aside-width);
@@ -19,17 +19,17 @@
 
 .chat-wrapper {
     overflow-y: auto;
-    
-    &>:first-child {
+
+    & > :first-child {
         border-top: 1px solid var(--background-secondary-light);
         border-bottom: 1px solid var(--background-secondary-light);
     }
 
-    &>div:not(:first-child) {
+    & > div:not(:first-child) {
         border-bottom: 1px solid var(--background-secondary-light);
     }
 
     &::-webkit-scrollbar {
         display: none;
-    }  
+    }
 }

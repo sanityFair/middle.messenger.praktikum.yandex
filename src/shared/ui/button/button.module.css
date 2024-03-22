@@ -1,15 +1,14 @@
 .button {
     display: inline-block;
     color: var(--color-white);
-    text-align: center;
     vertical-align: middle;
     cursor: pointer;
     border: none;
     height: 40px;
     user-select: none;
     background-color: var(--brand-primary);
-    transition: all .2s linear;
-    font-family: Inter;
+    transition: all 0.2s linear;
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 13px;
@@ -21,10 +20,10 @@
 
     &:active,
     :hover {
-        opacity: .8;
+        opacity: 0.8;
     }
 
-    :focus+&,
+    :focus + &,
     &:focus {
         outline: 0;
     }
@@ -32,13 +31,21 @@
 
 .link {
     display: inline-block;
-    font-family: 'Inter';
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 11px;
     line-height: 11px;
-    color: #3369F3;
+    color: #3369f3;
     height: 40px;
     padding: var(--gap-s) var(--gap-m);
     text-align: center;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.block {
+    width: 100%;
 }

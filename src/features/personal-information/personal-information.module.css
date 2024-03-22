@@ -7,6 +7,7 @@
         border-bottom: none;
     }
 }
+
 .personal-item {
     display: flex;
     align-items: center;
@@ -42,7 +43,7 @@
 }
 
 .name {
-    font-family: 'Inter';
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 13px;
@@ -51,7 +52,7 @@
 }
 
 .value {
-    font-family: 'Inter';
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 13px;

@@ -2,7 +2,7 @@
     position: absolute;
     width: 64px;
     background-color: var(--background-secondary-light);
-    border-right: 1px solid #EAEAEA;
+    border-right: 1px solid #eaeaea;
     height: 100%;
     display: flex;
     align-items: center;
@@ -17,11 +17,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all .2s linear;
+    transition: all 0.2s linear;
     z-index: 12;
 
     &:hover {
         cursor: pointer;
-        opacity: .8;
+        opacity: 0.8;
     }
 }

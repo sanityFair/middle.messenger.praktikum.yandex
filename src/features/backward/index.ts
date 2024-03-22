@@ -1,1 +1,1 @@
-export { default as Backward } from './backward.hbs?raw';
+export { Backward } from './backward';

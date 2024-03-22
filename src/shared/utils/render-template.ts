@@ -25,5 +25,5 @@ export const renderTemplate = <T>({
         root.innerHTML = result;
     }
 
-    return;
+    return undefined;
 };
