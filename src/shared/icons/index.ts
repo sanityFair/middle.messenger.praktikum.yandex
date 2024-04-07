@@ -7,6 +7,8 @@ import StatusRead from './status-read.svg';
 import ThreeDots from './three-dots.svg';
 import ProfileAvatar from './avatar.svg';
 import ArrowForward from './arrow-forward.svg';
+import Add from './add.svg';
+import Users from './users.svg';
 
 export const icons = {
     Arrow,
@@ -18,4 +20,6 @@ export const icons = {
     ThreeDots,
     ProfileAvatar,
     ArrowForward,
+    Add,
+    Users,
 };

@@ -1,14 +1,26 @@
 .profile-link {
     display: flex;
     justify-content: flex-end;
-    column-gap: var(--gap-2xs);
+    column-gap: var(--gap-xs);
     color: var(--text-secondary);
     font-family: Inter, sans-serif;
     font-style: normal;
     font-size: 12px;
     line-height: 12px;
+    align-items: center;
 
     &:hover {
         cursor: pointer;
+    }
+
+    & a {
+        padding: (--gap-s) var(--gap-xs);
+        color: var(--text-secondary);
+        height: min-content;
+        font-family: Inter, sans-serif;
+        font-style: normal;
+        font-size: 12px;
+        line-height: 12px;
+        font-weight: 400;
     }
 }

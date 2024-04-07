@@ -9,6 +9,8 @@ type ExternalProps = {
     block?: boolean;
     page?: string;
     onClick?: () => void;
+    className?: string;
+    type?: string;
 };
 
 type ButtonProps = ExternalProps & {
@@ -21,8 +23,27 @@ type ButtonProps = ExternalProps & {
 export class Button extends Block<ButtonProps> {
     static componentName: string = 'Button';
 
-    constructor({ title, button, block, link, onClick = () => {}, page }: ExternalProps) {
-        super({ title, styles, block, button, link, page, events: { click: onClick } });
+    constructor({
+        title,
+        button,
+        block,
+        link,
+        onClick = () => {},
+        page,
+        type = 'button',
+        className,
+    }: ExternalProps) {
+        super({
+            title,
+            styles,
+            block,
+            button,
+            link,
+            page,
+            className,
+            type,
+            events: { click: onClick },
+        });
     }
 
     protected render(): string {

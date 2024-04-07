@@ -1,6 +1,6 @@
 import { Block } from './block';
 
-export const renderDOM = (block: Block<Record<string, unknown>>) => {
+export const renderDOM = (block: Block) => {
     const root = document.querySelector('#app');
 
     if (root) {

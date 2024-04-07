@@ -1,5 +1,15 @@
+.root {
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
 .message {
-    width: calc(50% - var(--gap-xl));
     height: auto;
     background-color: var(--background-default);
     border-radius: 10px;
@@ -11,7 +21,8 @@
     margin: 1rem 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: var(--gap-s);
+    align-items: flex-end;
 }
 
 .mate {
