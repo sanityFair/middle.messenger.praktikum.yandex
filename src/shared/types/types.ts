@@ -1,3 +1,5 @@
+import { Block } from '../utils';
+
 export type RefsObject = Record<string, HTMLInputElement>;
 
 export type ChatRoom = {
@@ -16,6 +18,7 @@ export type LastMessage = {
 };
 
 export type User = {
+    id?:number;
     first_name: string;
     second_name: string;
     avatar: string;
@@ -23,3 +26,11 @@ export type User = {
     login: string;
     phone: string;
 };
+
+export type Indexed<T = unknown> = {
+    [key in string]: T;
+};
+
+export interface BlockClass<P> extends Function {
+    new (props: P): Block<P>;
+}

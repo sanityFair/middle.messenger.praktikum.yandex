@@ -1,7 +1,10 @@
-import { Block } from '@/shared/utils';
+import { Block, getDateTime } from '@/shared/utils';
 import styles from './chat-info.module.css';
+import store from '@/shared/utils/store';
+import { ChatController } from '@/shared/controllers';
 
 type ExternalProps = {
+    id?: number;
     avatar?: string;
     title?: string;
     time?: string;
@@ -11,19 +14,34 @@ type ExternalProps = {
 
 type ChatInfoProps = ExternalProps & {
     styles?: CSSModuleClasses;
+    events?: {
+        click?: () => void;
+    };
 };
 
 export class ChatInfo extends Block<ChatInfoProps> {
     static componentName: string = 'ChatInfo';
 
-    constructor(props: ExternalProps) {
-        super({ styles, ...props });
+    constructor({time,...props}: ExternalProps) {
+        super({ styles, time: getDateTime(time, { dateStyle: 'short' }), ...props });
+
+        this.setProps({
+            events: {
+                click: this.handleSelect,
+            },
+        });
+    }
+
+    handleSelect() {
+        store.set('selectedChatId', this.id);
+        ChatController.getChatToken();
+        ChatController.getChatUsers(this.id);
     }
 
     render() {
         // language=hbs
         return `
-            <div class={{styles.chat-info}}>
+            <div class={{styles.chat-info}} id={{id}} onClick={{click}}>
                 <div class={{styles.avatar}}>{{{ IconView url=avatar }}}</div>
                 <div class={{styles.name}}>{{title}}</div>
                 <div class={{styles.time}}>{{time}}</div>

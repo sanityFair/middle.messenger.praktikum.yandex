@@ -1,11 +1,14 @@
 import { Block } from '@/shared/utils';
 import styles from './chat-action-bar.module.css';
 import { icons } from '@/shared/icons';
+import { ChatController } from '@/shared/controllers';
 
 type ChatActionBarProps = {
     styles?: CSSModuleClasses;
     paperClip: string;
     arrowForward: string;
+    onSubmit?: (event: SubmitEvent) => void;
+    webscoket?: WebSocket;
 };
 
 export class ChatActionBar extends Block<ChatActionBarProps> {
@@ -13,6 +16,25 @@ export class ChatActionBar extends Block<ChatActionBarProps> {
 
     constructor() {
         super({ styles, paperClip: icons.PaperClip, arrowForward: icons.ArrowForward });
+
+        this.setProps({
+            webscoket: ChatController.connectChat(),
+            onSubmit(e) {
+                e.preventDefault();
+                const messageInput = document.forms[2].message;
+
+                if (messageInput.value) {
+                    this.webscoket?.send(
+                        JSON.stringify({
+                            type: 'message',
+                            content: messageInput.value,
+                        }),
+                    );
+                }
+
+                messageInput.value = ''
+            },
+        });
     }
 
     render() {
@@ -20,9 +42,9 @@ export class ChatActionBar extends Block<ChatActionBarProps> {
         return `
             <div class={{styles.chat-action-bar}}>
                 {{{ IconButton url=paperClip className=styles.file }}}
-                <form>
-                    {{{ Input type="text" placeholder="Сообщение" name="message" className=styles.message }}}
-                    {{{ IconButton type="button" url=arrowForward }}}
+                <form name="chat">
+                    {{{ Input type="text" placeholder="Сообщение" id="message" name="message" className=styles.message }}}
+                    {{{ IconButton type="button" url=arrowForward  onClick=onSubmit}}}
                 </form>
             </div>
         `;

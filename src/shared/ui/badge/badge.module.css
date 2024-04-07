@@ -13,3 +13,7 @@
     font-weight: 500;
     padding: var(--gap-xs);
 }
+
+.badge[data-count='0'] {
+    display: none;
+}
