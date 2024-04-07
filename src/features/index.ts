@@ -9,3 +9,5 @@ export * from './backward';
 export * from './chat-action-bar';
 export * from './chat-nav-bar';
 export * from './message';
+export * from './add-chat';
+export * from './user-item';

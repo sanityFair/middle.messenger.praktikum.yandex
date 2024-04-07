@@ -19,7 +19,7 @@ export class Badge extends Block<BadgeProps> {
     render() {
         // language=hbs
         return `
-            <div class={{styles.badge}}>
+            <div class={{styles.badge}} data-count={{count}}>
                 {{count}}
             </div>
         `;

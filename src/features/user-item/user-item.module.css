@@ -1,0 +1,30 @@
+.user-item {
+    cursor: pointer;
+    position: relative;
+    padding: var(--gap-m) 0;
+    list-style-type: none;
+    transition: 0.2s;
+    user-select: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & > span {
+        font-family: Inter, sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 18px;
+    }
+}
+
+.close {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius-circle);
+    background-color: var(--brand-secondary);
+    color: var(--color-white);
+}

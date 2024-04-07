@@ -3,14 +3,16 @@ import { EVENTS } from '../constants';
 import { EventBus } from './event-bus';
 
 import Handlebars from 'handlebars';
+import { isEqual } from './is-equal';
+import { Indexed } from '../types';
 
-export class Block<P extends { [key: string]: unknown }> {
+export class Block<P = Record<string, unknown>> {
     static componentName: string;
 
     public id = uuidv4();
 
     protected _element: HTMLElement | null = null;
-    protected readonly props: P;
+    protected readonly props: Partial<P>;
     protected children: { [id: string]: Block<Record<string, unknown>> } = {};
     private _eventBus: EventBus;
 
@@ -47,7 +49,7 @@ export class Block<P extends { [key: string]: unknown }> {
         this._eventBus.emit(EVENTS.FLOW_CDM);
     }
 
-    private _componentDidUpdate(oldProps: P, newProps: P) {
+    private _componentDidUpdate(oldProps: Indexed, newProps: Indexed) {
         const response = this.componentDidUpdate(oldProps, newProps);
 
         if (!response) {
@@ -56,8 +58,8 @@ export class Block<P extends { [key: string]: unknown }> {
         this._render();
     }
 
-    componentDidUpdate(oldProps: P, newProps: P) {
-        return JSON.stringify(oldProps) === JSON.stringify(newProps);
+    componentDidUpdate(oldProps: Indexed, newProps: Indexed) {
+        return isEqual(oldProps, newProps);
     }
 
     setProps = (nextProps: Partial<P>) => {
@@ -126,7 +128,7 @@ export class Block<P extends { [key: string]: unknown }> {
     }
 
     private _removeEvents() {
-        const events = this.props.events;
+        const events = (this.props as Record<string, unknown>).events;
 
         if (!events || !this._element) {
             return;
@@ -138,7 +140,7 @@ export class Block<P extends { [key: string]: unknown }> {
     }
 
     private _addEvents() {
-        const events = this.props.events;
+        const events = (this.props as Record<string, unknown>).events;
 
         if (!events) {
             return;
@@ -188,7 +190,7 @@ export class Block<P extends { [key: string]: unknown }> {
     }
 
     show() {
-        this.getContent().style.display = 'block';
+        this.getContent().style.display = '';
     }
 
     hide() {
