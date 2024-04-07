@@ -5,6 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: -1;
 
     & p {
         font-family: Inter, sans-serif;
@@ -21,12 +22,14 @@
     padding: var(--gap-m);
     display: grid;
     grid-template-rows: max-content 1fr max-content;
+    z-index: -1;
 }
 
 .messages {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     overflow-y: auto;
+    justify-content: flex-end;
 }
 
 .messages::-webkit-scrollbar {

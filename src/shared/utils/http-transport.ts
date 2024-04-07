@@ -2,22 +2,47 @@ import { METHODS } from '@/shared/constants';
 import { Options } from '@/shared/types';
 import { request } from './request';
 
-class HTTPTransport {
-    get<T>(url: string, options: Options<T>) {
-        return request(url, { ...options, method: METHODS.GET }, options?.timeout);
+type HTTPMethod = <T = unknown>(
+    url: string,
+    options?: Omit<Options<T>, 'method'>,
+) => Promise<XMLHttpRequest>;
+
+export class HTTPTransport {
+    private baseUrl: string;
+
+    constructor(baseUrl: string = '') {
+        this.baseUrl = baseUrl;
     }
 
-    post<T>(url: string, options: Options<T>) {
-        return request(url, { ...options, method: METHODS.POST }, options?.timeout);
-    }
+    get: HTTPMethod = (url: string, options = {}) => {
+        return request(
+            this.baseUrl.concat(url),
+            { ...options, method: METHODS.GET },
+            options?.timeout,
+        );
+    };
 
-    put<T>(url: string, options: Options<T>) {
-        return request(url, { ...options, method: METHODS.PUT }, options?.timeout);
-    }
+    post: HTTPMethod = (url: string, options = {}) => {
+        return request(
+            this.baseUrl.concat(url),
+            { ...options, method: METHODS.POST },
+            options?.timeout,
+        );
+    };
 
-    delete<T>(url: string, options: Options<T>) {
-        return request(url, { ...options, method: METHODS.DELETE }, options.timeout);
-    }
+    put: HTTPMethod = (url: string, options = {}) => {
+        return request(
+            this.baseUrl.concat(url),
+            { ...options, method: METHODS.PUT },
+            options?.timeout,
+        );
+    };
+
+    delete: HTTPMethod = (url: string, options = {}) => {
+        return request(
+            this.baseUrl.concat(url),
+            { ...options, method: METHODS.DELETE },
+            options?.timeout,
+        );
+    };
 }
-
-export default new HTTPTransport();

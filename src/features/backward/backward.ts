@@ -1,10 +1,11 @@
-import { Block } from '@/shared/utils';
+import { Block, router } from '@/shared/utils';
 import styles from './backward.module.css';
 import { icons } from '@/shared/icons';
 
 type BackwardProps = {
     styles?: CSSModuleClasses;
     icon?: string;
+    onRClick?: () => void;
 };
 
 export class Backward extends Block<BackwardProps> {
@@ -12,14 +13,19 @@ export class Backward extends Block<BackwardProps> {
 
     constructor() {
         super({ styles, icon: icons.ArrowBack });
+
+        this.setProps({
+            onRClick: () => router.go('/messenger'),
+        });
     }
 
     render() {
         // language=hbs
         return `
             <div class={{styles.backward}}>
-                <div page="chats" class={{styles.backward-wrapper-icon}}><img src={{icon}} alt="Вернуться" class={{styles.backward-icon}}></aside></div>
+                {{{ IconButton  url=icon onClick=onRClick alt="Вернуться"  className=styles.backward-icon }}}
             </div>
+            
         `;
     }
 }
