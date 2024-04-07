@@ -8,6 +8,7 @@
     border-right: 1px solid var(--background-secondary-light);
     height: 100%;
     padding: var(--gap-l) var(--gap-xs) 0;
+    z-index: 2;
 }
 
 .nav {
@@ -19,13 +20,14 @@
 
 .chat-wrapper {
     overflow-y: auto;
+    flex-grow: 1;
 
     & > :first-child {
         border-top: 1px solid var(--background-secondary-light);
         border-bottom: 1px solid var(--background-secondary-light);
     }
 
-    & > div:not(:first-child) {
+    & > div:not(:first-child, :last-child) {
         border-bottom: 1px solid var(--background-secondary-light);
     }
 

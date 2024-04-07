@@ -11,6 +11,15 @@ export default defineConfig({
             },
         },
     },
+    server: {
+        proxy: {
+            '/api/v2': {
+                target: 'https://ya-praktikum.tech/api/v2',
+                changeOrigin: true,
+                secure: false,
+            },
+        },
+    },
     resolve: {
         alias: {
             '@': path.resolve(__dirname, 'src'),

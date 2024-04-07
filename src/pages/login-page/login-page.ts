@@ -1,6 +1,7 @@
-import { Block } from '@/shared/utils';
+import { Block, router } from '@/shared/utils';
 import styles from './login-page.module.css';
 import { hasErrorForm } from '@/shared/utils/has-error-form';
+import { AuthController } from '@/shared/controllers/auth-controller';
 
 interface SubmitEvent extends Event {
     submitter: HTMLElement;
@@ -10,6 +11,7 @@ type LoginProps = {
     onSubmit?: (event: SubmitEvent) => void;
     onInput?: (event: FocusEvent) => void;
     onFocus?: (event: FocusEvent) => void;
+    onRedirectSignUp?: () => void;
     styles?: CSSModuleClasses;
 };
 
@@ -28,11 +30,14 @@ export class LoginPage extends Block<LoginProps> {
                 const { login, password } = forms;
 
                 if (!isError && login.value && password.value) {
-                    console.log({
+                    AuthController.login({
                         login: login.value,
                         password: password.value,
                     });
                 }
+            },
+            onRedirectSignUp: () => {
+                router.go('/sign-up');
             },
         });
     }
@@ -49,7 +54,7 @@ export class LoginPage extends Block<LoginProps> {
                         <div class={{styles.spacer}}></div>
                     <div class="{{styles.row}}">
                         {{{ Button title="Авторизоваться" button=true onClick=onSubmit page="chats" }}}
-                        {{{ Button title="Нет аккаунта?" link="true" page="signIn" }}}
+                        {{{ Button title="Нет аккаунта?" link="true" onClick=onRedirectSignUp }}}
                     </div>
                     </form>
                 </div>
