@@ -1,39 +1,46 @@
 import { Block } from '@/shared/utils';
 import styles from './chat-workspace.module.css';
 import { ChatRoom } from '@/shared/types';
+import store, { StoreEvents } from '@/shared/utils/store';
 
-type ExternalProps = {
-    chatSelected: boolean;
-};
-
-type ChatWorkSpaceProps = ExternalProps & {
+type ChatWorkSpaceProps = {
     styles?: CSSModuleClasses;
     chats?: Partial<ChatRoom>[];
+    chatSelected?: boolean;
+    chatId?: number;
 };
 
 export class ChatWorkSpace extends Block<ChatWorkSpaceProps> {
     static componentName: string = 'ChatWorkSpace';
+    chatSelected: boolean;
 
-    constructor({ chatSelected = true }: ExternalProps) {
-        super({ styles, chatSelected });
+    constructor() {
+        super({ styles });
+        this.chatSelected = false;
+
+        
+        store.on(StoreEvents.Updated, () => {
+            // вызываем обновление компонента, передав данные из хранилища
+            const newChatId = store.getState().selectedChatId;
+
+            if (this.props.chatId === newChatId) return;
+            
+            this.setProps({
+                chatSelected: Boolean(store.getState().selectedChatId),
+                chatId: store.getState().selectedChatId as number,
+            });
+        });
     }
 
     render() {
         // language=hbs
+
         return `
             {{#if chatSelected}}
                 <div class={{styles.chat-selected}}>
                     {{{ ChatNavBar }}}
                     <div class={{styles.messages }}>
-                        <span class={{styles.date }}>19 июня</span>
-                        {{{ Message owner=true }}}
-                        {{{ Message mate=true }}}
-                        {{{ Message owner=true }}}
-                        {{{ Message mate=true }}}
-                        {{{ Message owner=true }}}
-                        {{{ Message mate=true }}}
-                        {{{ Message owner=true }}}
-                        {{{ Message mate=true }}}
+                        {{{ Message  }}}
                     </div>
                     {{{ ChatActionBar }}}
                 </div>
