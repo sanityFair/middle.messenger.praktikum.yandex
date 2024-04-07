@@ -1,10 +1,12 @@
-import { Block, hasErrorForm } from '@/shared/utils';
-import styles from './sign-in-page.module.css';
+import { Block, hasErrorForm, router } from '@/shared/utils';
+import styles from './sign-up-page.module.css';
+import { AuthController } from '@/shared/controllers/auth-controller';
 
-type SignInProps = {
+type SignUpProps = {
     onSubmit?: (event: SubmitEvent) => void;
     onInput?: (event: FocusEvent) => void;
     onFocus?: (event: FocusEvent) => void;
+    onRedirectSingIn?: () => void;
     styles?: Record<string, string>;
 };
 
@@ -12,8 +14,8 @@ interface SubmitEvent extends Event {
     submit: HTMLElement;
 }
 
-export class SignInPage extends Block<SignInProps> {
-    static componentName: string = 'SignInPage';
+export class SignUpPage extends Block<SignUpProps> {
+    static componentName: string = 'SignUpPage';
 
     constructor() {
         super({ styles });
@@ -37,16 +39,18 @@ export class SignInPage extends Block<SignInProps> {
                     oldPassword.value &&
                     newPassword.value
                 ) {
-                    console.log({
+                    AuthController.register({
                         login: login.value,
                         email: email.value,
                         second_name: second_name.value,
                         phone: phone.value,
                         first_name: first_name.value,
-                        oldPassword: oldPassword.value,
-                        newPassword: newPassword.value,
+                        password: newPassword.value,
                     });
                 }
+            },
+            onRedirectSingIn: () => {
+                router.go('/');
             },
         });
     }
@@ -67,7 +71,7 @@ export class SignInPage extends Block<SignInProps> {
                         {{{ Input type="password" name="newPassword" id="newPassword" label="Пароль" placeholder="Пароль" required="true" }}}
                         <div>
                             {{{ Button title="Зарегистрироваться" onClick=onSubmit  button=true page="chats"}}}
-                            {{{ Button title="Войти" link=true page="login"}}}
+                            {{{ Button title="Войти" link=true onClick=onRedirectSingIn }}}
                         </div>
                     </form>
                 </div>

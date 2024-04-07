@@ -20,3 +20,15 @@ rules:
         - error
         - allowedNames:
               - self
+    '@typescript-eslint/ban-types':
+        - error
+        - types:
+              String: false
+              Boolean: false
+              Number: false
+              Symbol: false
+              '{}': false
+              Object: false
+              object: false
+              Function: false
+              extendDefaults: true
