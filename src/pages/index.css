@@ -1,7 +1,7 @@
 @import url('./error-page/error-page.module.css');
 @import url('./not-found-page/not-found-page.module.css');
 @import url('./login-page/login-page.module.css');
-@import url('./sign-in-page/sign-in-page.module.css');
+@import url('./sign-up-page/sign-up-page.module.css');
 @import url('./chat-page/chat-page.module.css');
 @import url('./profile-page/profile-page.module.css');
 @import url('./change-password-page/change-password-page.module.css');

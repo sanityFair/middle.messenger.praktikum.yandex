@@ -1,11 +1,14 @@
 import { Block } from '@/shared/utils';
 import styles from './chat-rooms.module.css';
 import { ChatRoom } from '@/shared/types';
-import { chatsMock } from '@/shared/mocks';
+import { icons } from '@/shared/icons';
+import store, { StoreEvents } from '@/shared/utils/store';
+import { ChatController } from '@/shared/controllers';
 
 type ChatRoomsProps = {
     styles?: CSSModuleClasses;
     chats?: Partial<ChatRoom>[];
+    icon?: string;
 };
 
 export class ChatRooms extends Block<ChatRoomsProps> {
@@ -13,8 +16,15 @@ export class ChatRooms extends Block<ChatRoomsProps> {
 
     chats: Partial<ChatRoom>[] = [];
 
-    constructor({ chats = chatsMock }: ChatRoomsProps) {
-        super({ styles, chats });
+    constructor({ chats = [] }: ChatRoomsProps) {
+        super({ styles, chats, icon: icons.Add });
+
+        ChatController.getChats();
+
+        store.on(StoreEvents.Updated, () => {
+            // вызываем обновление компонента, передав данные из хранилища
+            this.setProps({ chats: store.getState().chats as ChatRoom[] });
+        });
     }
 
     render() {
@@ -28,11 +38,12 @@ export class ChatRooms extends Block<ChatRoomsProps> {
                 <div class={{styles.chat-wrapper}}>
                     {{#each chats}}
                         {{#with this}}
-                            {{{ ChatInfo unread_count=unread_count avatar=avatar title=title content=last_message.content time=last_message.time }}}
+                            {{{ ChatInfo unread_count=unread_count avatar=avatar id=id title=title content=last_message.content time=last_message.time }}}
                         {{/with}}
                     {{/each}}
                 </div>
-            </div>  
+                {{{ AddChat }}}
+            </div>
         `;
     }
 }

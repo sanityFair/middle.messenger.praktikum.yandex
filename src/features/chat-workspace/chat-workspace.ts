@@ -1,25 +1,34 @@
 import { Block } from '@/shared/utils';
 import styles from './chat-workspace.module.css';
 import { ChatRoom } from '@/shared/types';
+import store, { StoreEvents } from '@/shared/utils/store';
 
-type ExternalProps = {
-    chatSelected: boolean;
-};
-
-type ChatWorkSpaceProps = ExternalProps & {
+type ChatWorkSpaceProps = {
     styles?: CSSModuleClasses;
     chats?: Partial<ChatRoom>[];
+    chatSelected?: boolean;
 };
 
 export class ChatWorkSpace extends Block<ChatWorkSpaceProps> {
     static componentName: string = 'ChatWorkSpace';
+    chatSelected: boolean;
 
-    constructor({ chatSelected = true }: ExternalProps) {
-        super({ styles, chatSelected });
+    constructor() {
+        super({ styles });
+        this.chatSelected = false;
+
+        
+        store.on(StoreEvents.Updated, () => {
+            // вызываем обновление компонента, передав данные из хранилища
+            this.setProps({
+                chatSelected: Boolean(store.getState().selectedChatId),
+            });
+        });
     }
 
     render() {
         // language=hbs
+
         return `
             {{#if chatSelected}}
                 <div class={{styles.chat-selected}}>
