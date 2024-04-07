@@ -1,33 +1,37 @@
 import { Block } from '@/shared/utils';
 import styles from './message.module.css';
+import store, { StoreEvents } from '@/shared/utils/store';
 
-type ExternalProps = {
-    owner?: boolean;
-    mate?: boolean;
-};
-
-type MessageProps = ExternalProps & {
+type MessageProps = {
     styles?: CSSModuleClasses;
+    messages?: unknown;
 };
 
 export class Message extends Block<MessageProps> {
     static componentName: string = 'Message';
 
-    constructor({ owner, mate }: ExternalProps) {
-        super({ styles, owner, mate });
+    constructor() {
+        super({ styles });
+
+        store.on(StoreEvents.Updated, () => {
+
+            this.setProps({ messages: store.getState().messages });
+        });
     }
     protected render(): string {
         // language=hbs
+
         return `
-        <div class='{{styles.message}} {{#if owner}} {{styles.owner}} {{/if}} {{#if mate}} {{styles.mate}} {{/if}}'>
-            <p>Привет! Смотри, тут всплыл интересный кусок лунной космической истории — 
-                НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на Луну. 
-                Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки 
-                этих камер все еще находятся на поверхности Луны, так как астронавты с собой забрали 
-                только кассеты с пленкой.
-            </p>
-            <time class={{styles.time}}>11:50</time>
-        </div>
+        <div class={{styles.root}}>
+            {{#each messages}}
+                {{#with this}}
+                    <div class='{{@root.styles.message}} {{@root.styles.owner}}'>
+                    <p>{{content}}</p>
+                    <time class={{@root.styles.time}}>{{time}}</time>
+                </div>
+                {{/with}}
+            {{/each}}
+       </div>
     `;
     }
 }

@@ -1,5 +1,6 @@
 import { Block, hasErrorForm } from '@/shared/utils';
 import styles from './change-password-page.module.css';
+import { UserController } from '@/shared/controllers';
 
 interface SubmitEvent extends Event {
     submitter: HTMLElement;
@@ -27,9 +28,9 @@ export class ChangePasswordPage extends Block<ChangePasswordPageProps> {
                 const { oldPassword, newPasswrord, repeatNewPassword } = forms;
 
                 if (!isError && repeatNewPassword.value === newPasswrord.value) {
-                    console.log({
+                    UserController.updatePassword({
                         oldPassword: oldPassword.value,
-                        newPasswrord: newPasswrord.value,
+                        newPassword: newPasswrord.value,
                     });
                 }
             },
@@ -61,7 +62,6 @@ export class ChangePasswordPage extends Block<ChangePasswordPageProps> {
                     </form>
                 </div>
             </div>
-    
         `;
     }
 }

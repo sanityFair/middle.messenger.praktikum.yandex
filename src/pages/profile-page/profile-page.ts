@@ -1,7 +1,9 @@
 import { Block } from '@/shared/utils';
 import styles from './profile-page.module.css';
+import store from '@/shared/utils/store';
+import { User } from '@/shared/types';
 
-type ProfilePageProps = {
+type ProfilePageProps = Partial<User> & {
     styles?: CSSModuleClasses;
 };
 
@@ -10,6 +12,10 @@ export class ProfilePage extends Block<ProfilePageProps> {
 
     constructor() {
         super({ styles });
+
+        this.setProps({
+            ...(store.getState().user as User),
+        });
     }
 
     render() {
@@ -18,8 +24,8 @@ export class ProfilePage extends Block<ProfilePageProps> {
             <div class={{styles.profile-page}}>
                 {{{ Backward }}}
                 <div class={{styles.profile-wrapper}}>
-                    {{{ ProfileAvatar first_name="Иван" }}}
-                    {{{ PersonalInformation first_name="Иван" second_name="Дурак" display_name="Ivan" login="ivanivanov" email="mail@mail.ru" phone="+79090876754" }}}
+                    {{{ ProfileAvatar first_name=first_name }}}
+                    {{{ PersonalInformation first_name=first_name second_name=second_name display_name=display_name login=login email=email phone=phone }}}
                 </div>
             </div>
         `;
