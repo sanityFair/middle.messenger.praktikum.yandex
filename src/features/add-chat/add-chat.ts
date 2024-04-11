@@ -38,7 +38,6 @@ export class AddChat extends Block<AddChatProps> {
 
     handleSubmit(e: SubmitEvent) {
         e.preventDefault();
-
         const title = document.forms[0].chatName.value;
 
         if (title) {

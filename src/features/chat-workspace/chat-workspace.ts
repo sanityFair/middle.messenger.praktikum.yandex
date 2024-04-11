@@ -17,11 +17,11 @@ export class ChatWorkSpace extends Block<ChatWorkSpaceProps> {
         super({ styles });
         this.chatSelected = false;
 
-        
         store.on(StoreEvents.Updated, () => {
             // вызываем обновление компонента, передав данные из хранилища
             this.setProps({
                 chatSelected: Boolean(store.getState().selectedChatId),
+                chats: store.getState().chats as Partial<ChatRoom>[],
             });
         });
     }

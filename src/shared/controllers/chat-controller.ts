@@ -79,8 +79,8 @@ export class ChatController {
 
             const response = await chatApi.getChatToken(chatId);
             store.set('token', JSON.parse(response.responseText).token);
-
             // await ChatController.connectChat();
+
         } catch (error) {
             store.set('isAuth', false);
             store.set('user', {});
@@ -96,7 +96,6 @@ export class ChatController {
             if (!chatId || !userId || !token) {
                 return;
             }
-
             const socket = new WebSocket(
                 `wss://ya-praktikum.tech/ws/chats/${userId}/${chatId}/${token}`,
             );
