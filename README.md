@@ -11,7 +11,7 @@
 ## Проект в интернете
 
 Работающую версию можно просмотреть здесь:
-[Netlify-App](https://deploy--resplendent-lamington-09b434.netlify.app/)
+[Netlify-App](https://deploy--serene-mandazi-bfd5cf.netlify.app/)
 
 ## Макеты
 

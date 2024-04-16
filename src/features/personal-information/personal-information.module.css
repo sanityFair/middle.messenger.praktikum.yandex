@@ -26,10 +26,13 @@
     &:not(:last-child) {
         color: var(--brand-primary);
         border-bottom: 1px solid var(--background-secondary-light);
-    }
 
-    &:last-child {
-        color: var(--brand-secondary);
+        & a {
+            padding: var(--gap-s) 0;
+            height: auto;
+            font-size: 14px;
+            font-weight: 400;
+        }
     }
 
     &:hover {
@@ -58,4 +61,10 @@
     font-size: 13px;
     line-height: 13px;
     color: var(--text-secondary);
+}
+
+.exit {
+    color: var(--brand-secondary);
+    font-size: 14px;
+    padding: 0;
 }

@@ -1,15 +1,28 @@
-import { Block } from '@/shared/utils';
+import { Block, router } from '@/shared/utils';
 import styles from './personal-information.module.css';
+import { AuthController } from '@/shared/controllers/auth-controller';
+import { User } from '@/shared/types';
 
 type PersonalInformationProps = {
     styles?: CSSModuleClasses;
+    logout?: () => void;
+    redirectToChangeProfile?: () => void;
+    redirectToChangePassword?: () => void;
 };
 
 export class PersonalInformation extends Block<PersonalInformationProps> {
     static componentName: string = 'PersonalInformation';
 
-    constructor() {
-        super({ styles });
+    constructor(user: Partial<User>) {
+        super({ styles, ...user });
+
+        this.setProps({
+            logout: () => {
+                AuthController.logout();
+            },
+            redirectToChangeProfile: () => router.go('/change-profile'),
+            redirectToChangePassword: () => router.go('/change-password'),
+        });
     }
 
     render() {
@@ -42,15 +55,15 @@ export class PersonalInformation extends Block<PersonalInformationProps> {
                 </div>
                 <div class={{styles.personal-spacer}}></div>
                 <div class={{styles.personal-action}}>
-                    <a  page="сhangeProfilePage" class={{styles.change-info}}>Изменить данные</a>
+                    {{{ Button title="Изменить данные"  link="true" onClick=redirectToChangeProfile className=styles.change-info }}}
                 </div>
                 <div class={{styles.personal-action}}>
-                    <a  page="сhangePasswordPage" class={{styles.change-password}} >Изменить пароль</a>
+                    {{{ Button title="Изменить пароль"  link="true" onClick=redirectToChangePassword className=styles.change-password }}}
                 </div>
                 <div class={{styles.personal-action}}>
-                    <a page="login" class={{styles.exit}} >Выйти</a>
+                    {{{ Button title="Выйти"  link="true" onClick=logout className=styles.exit }}}
                 </div>
-            </div>    
+            </div>
         `;
     }
 }
