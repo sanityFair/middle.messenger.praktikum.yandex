@@ -29,3 +29,5 @@ document.addEventListener('DOMContentLoaded', () => {
         .use('/messenger', ChatPage)
         .start();
 });
+
+
