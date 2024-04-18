@@ -1,7 +1,7 @@
-import { Block } from '@/shared/utils';
+import { Block } from '../../shared/utils';
 import styles from './profile-page.module.css';
-import store from '@/shared/utils/store';
-import { User } from '@/shared/types';
+import store from '../../shared/utils/store';
+import { User } from '../../shared/types';
 
 type ProfilePageProps = Partial<User> & {
     styles?: CSSModuleClasses;

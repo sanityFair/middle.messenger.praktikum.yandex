@@ -4,6 +4,7 @@ import { Route } from './route';
 class Router {
     static __instance: Router;
     private routes: Array<Route> = [];
+    private paths: Array<string> = [];
     private history: History = window.history;
     private _currentRoute: Route | null = null;
     private _rootQuery: string | null = null;
@@ -24,6 +25,7 @@ class Router {
     use(pathname: string, block: BlockClass<unknown>) {
         const route = new Route(pathname, block, { rootQuery: this._rootQuery });
         this.routes.push(route);
+        this.paths.push(pathname);
         return this;
     }
 
@@ -39,7 +41,7 @@ class Router {
 
     _onRoute(pathname: string) {
         const route = this.getRoute(pathname);
-
+        
         if (!route) return;
 
         if (this._currentRoute) {

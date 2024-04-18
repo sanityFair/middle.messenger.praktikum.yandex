@@ -1,8 +1,7 @@
-import * as components from '@/shared/ui';
-import * as features from '@/features';
-import { BlockConstructable, registerComponent, router } from '@/shared/utils';
+import * as components from '../shared/ui';
+import * as features from '../features';
+import { BlockConstructable, registerComponent, router } from '../shared/utils';
 
-import './app.module.css';
 import {
     ChatPage,
     LoginPage,
@@ -10,8 +9,12 @@ import {
     ChangePasswordPage,
     ChangeProfilePage,
     ProfilePage,
-} from '@/pages';
-import { AuthController } from '@/shared/controllers/auth-controller';
+    NotFoundPage,
+    ErrorPage,
+} from '../pages';
+import { AuthController } from '../shared/controllers/auth-controller';
+
+import './app.module.css';
 
 Object.values({ ...components, ...features }).forEach((component) =>
     registerComponent(component as BlockConstructable<Record<string, unknown>>),
@@ -27,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .use('/change-password', ChangePasswordPage)
         .use('/change-profile', ChangeProfilePage)
         .use('/messenger', ChatPage)
+        .use('/500', ErrorPage)
+        .use('/404', NotFoundPage)
         .start();
 });
-
-

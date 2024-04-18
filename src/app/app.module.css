@@ -17,9 +17,8 @@ body {
 }
 
 body {
-    font:
-        14px Inter,
-        sans-serif;
+    font-family: Inter, sans-serif;
+    font-size: 14px;
     min-width: 100%;
     min-height: 100%;
 }

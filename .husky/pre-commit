@@ -1,1 +1,4 @@
-npm run lint:ts & npm run stylelint
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+npm run pre-commit

@@ -1,7 +1,7 @@
-import { Block, router } from '@/shared/utils';
+import { Block, router } from '../../shared/utils';
 import styles from './login-page.module.css';
-import { hasErrorForm } from '@/shared/utils/has-error-form';
-import { AuthController } from '@/shared/controllers/auth-controller';
+import { hasErrorForm } from '../../shared/utils/has-error-form';
+import { AuthController } from '../../shared/controllers/auth-controller';
 
 interface SubmitEvent extends Event {
     submitter: HTMLElement;

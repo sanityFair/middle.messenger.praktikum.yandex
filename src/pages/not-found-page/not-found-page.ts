@@ -1,4 +1,4 @@
-import { Block } from '@/shared/utils';
+import { Block } from '../../shared/utils';
 import styles from './not-found-page.module.css';
 
 type NotFoundPageProps = {

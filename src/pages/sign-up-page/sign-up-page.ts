@@ -1,6 +1,6 @@
-import { Block, hasErrorForm, router } from '@/shared/utils';
+import { Block, hasErrorForm, router } from '../../shared/utils';
 import styles from './sign-up-page.module.css';
-import { AuthController } from '@/shared/controllers/auth-controller';
+import { AuthController } from '../../shared/controllers/auth-controller';
 
 type SignUpProps = {
     onSubmit?: (event: SubmitEvent) => void;
