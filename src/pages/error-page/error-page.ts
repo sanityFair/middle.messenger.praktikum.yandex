@@ -1,4 +1,4 @@
-import { Block } from '@/shared/utils';
+import { Block } from '../../shared/utils';
 import styles from './error-page.module.css';
 
 type ErrorPageProps = {

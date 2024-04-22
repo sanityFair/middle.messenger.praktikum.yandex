@@ -1,5 +1,5 @@
-import { METHODS } from '@/shared/constants';
-import { Options } from '@/shared/types';
+import { METHODS } from '../../shared/constants';
+import { Options } from '../../shared/types';
 import { request } from './request';
 
 type HTTPMethod = <T = unknown>(
@@ -8,7 +8,7 @@ type HTTPMethod = <T = unknown>(
 ) => Promise<XMLHttpRequest>;
 
 export class HTTPTransport {
-    private baseUrl: string;
+    public baseUrl: string;
 
     constructor(baseUrl: string = '') {
         this.baseUrl = baseUrl;
